@@ -31,5 +31,7 @@
 
 void main()
 {
-  var x = 10
+  var x = 10;
+  var status = x is int ? "Yes" : "No";
+  print(status); 
 }
