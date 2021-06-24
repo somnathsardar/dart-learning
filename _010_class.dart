@@ -1,17 +1,32 @@
-class Test{
-  var x;
-  var y;
+class Person{
+  var name;
+  var age;
 
-  // Constructor
-  Test(int x,int y){
-    this.x = x;
-    this.y = y;
+  // Default Constructor
+  Person(String name, int age){
+    this.name = name;
+    this.age = age;
+  }
+
+  //Named constructor
+  Person.guest()
+  {
+    this.name = "Guest";
+    this.age = 18;
+  }
+
+  void showData()
+  {
+    print("Hi ${this.name}, You are ${age} years old");
   }
 }
 
 void main()
 {
-  var t = Test(2,5);
-  t.x = 40;
-  print(t.x);
+  Person person1 = Person("Somnath Sardar", 25);
+  Person person2 = Person("Test user", 29);
+  Person guestUser = Person.guest();
+  person1.showData();
+  person2.showData();
+  guestUser.showData();
 }
