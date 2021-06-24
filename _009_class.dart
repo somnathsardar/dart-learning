@@ -2,6 +2,7 @@ class Test{
   var x;
   var y;
 
+  // Constructor
   Test(int x,int y){
     this.x = x;
     this.y = y;
@@ -11,5 +12,6 @@ class Test{
 void main()
 {
   var t = Test(2,5);
-  print(t);
+  t.x = 40;
+  print(t.x);
 }
